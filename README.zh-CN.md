@@ -56,6 +56,8 @@ video-subtitle-parser --check
 
 常规依赖包括 `yt-dlp`、`requests`、`imageio-ffmpeg`、`opencc-python-reimplemented`。`mlx-whisper` 是可选依赖，只有在需要本地语音识别兜底时才必须安装。
 
+正式使用前，请阅读 [依赖与限制](docs/requirements-and-limitations.zh-CN.md)。里面明确说明了登录态边界、YouTube 请求频率、Chrome/远程调试状态、ASR 约束、媒体/水印风险和各平台失败模式。
+
 ## 快速开始
 
 自动识别平台：
@@ -203,6 +205,8 @@ video-subtitle-parser "$URL" --force --term-file terms.txt --out-dir materials/v
 ## 使用边界
 
 请把这个工具用于合法的个人工作流、研究、无障碍、内容生产和资料整理。处理视频时，请尊重平台条款、版权、创作者权益、私密内容边界和当地法律。没有权利发布的文字稿或截图，不要发布。
+
+当前稳定版不使用 Chrome 远程调试、不读取浏览器 cookie、不复用 Chrome 登录态，也不接收账号凭据。默认输入应该是公开视频。完整边界见 [依赖与限制](docs/requirements-and-limitations.zh-CN.md)。
 
 ## 路线图
 

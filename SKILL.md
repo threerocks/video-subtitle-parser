@@ -42,6 +42,9 @@ After parsing:
 - Read `*_transcript_turbo_clean.txt`.
 - Use `*_segments_clean.md` for timestamp checks.
 - Use downloaded MP4 files only after visual review for watermarks, subtitles, and platform UI.
+- Do not assume Chrome remote debugging, browser cookies, logged-in profiles, or unlimited subtitle requests are available.
+
+For full operational constraints, read `docs/requirements-and-limitations.md`.
 
 For project-specific names or terms:
 

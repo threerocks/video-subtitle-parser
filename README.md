@@ -63,6 +63,8 @@ video-subtitle-parser --check
 
 `yt-dlp`, `requests`, `imageio-ffmpeg`, and `opencc-python-reimplemented` are normal dependencies. `mlx-whisper` is optional until a video needs ASR fallback.
 
+Before production use, read [Requirements and Limitations](docs/requirements-and-limitations.md). It documents login-state boundaries, YouTube rate limits, Chrome/remote-debugging status, ASR constraints, media/watermark risks, and platform-specific failure modes.
+
 ## Quick Start
 
 Auto-detect a platform:
@@ -200,6 +202,8 @@ video-subtitle-parser "$URL" --force --term-file terms.txt --out-dir materials/v
 ## Ethics and Platform Respect
 
 Use this tool for lawful personal workflows, research, accessibility, and content production. Respect platform terms, copyright, creator rights, private content boundaries, and local law. Do not publish transcripts or screenshots when you do not have the right to do so.
+
+This tool does not use Chrome remote debugging, browser cookies, logged-in Chrome profiles, or account credentials in the current stable release. Public videos are the expected input. See [Requirements and Limitations](docs/requirements-and-limitations.md) for the full boundary list.
 
 ## Roadmap
 

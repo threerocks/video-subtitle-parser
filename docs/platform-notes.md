@@ -1,5 +1,7 @@
 # Platform Notes
 
+For full runtime dependencies, login-state boundaries, rate limits, browser/Chrome status, and privacy notes, read [Requirements and Limitations](requirements-and-limitations.md).
+
 ## Douyin
 
 The Douyin path uses the mobile share page because it exposes structured router data for many share URLs. When a `/playwm/` video URL appears, the tool first tries the corresponding `/play/` URL, then falls back to the original URL if needed.

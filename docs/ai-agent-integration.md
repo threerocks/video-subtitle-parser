@@ -10,6 +10,8 @@ Video Subtitle Parser is a normal command-line tool. Any AI coding assistant tha
 4. Use `*_segments_clean.md` when timestamps or quote checks matter.
 5. If image work is needed, use the downloaded MP4 only after visual review.
 
+Before using it in production, review [Requirements and Limitations](requirements-and-limitations.md). Agents should not assume browser login, Chrome remote debugging, cookies, or unlimited subtitle requests are available.
+
 ```bash
 video-subtitle-parser "$VIDEO_URL" \
   --platform auto \
