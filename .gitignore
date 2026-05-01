@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Runtime artifacts
+runs/
+materials/
+*.mp4
+*.mp3
+*.vtt
+*_transcript_turbo.json
+*_transcript_turbo.txt
+*_transcript_turbo_clean.txt
+*_segments_clean.md
+*_metadata.json

@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-subtitle-parser"
+version = "0.1.0"
+description = "Turn Douyin, YouTube, and Bilibili links into transcript, segment, and metadata artifacts for AI writing workflows."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "liulei" }
+]
+keywords = [
+  "transcript",
+  "subtitles",
+  "douyin",
+  "youtube",
+  "bilibili",
+  "yt-dlp",
+  "mlx-whisper",
+  "ai-agents",
+  "openclaw",
+  "hermes",
+  "content-workflow"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Text Processing"
+]
+dependencies = [
+  "requests>=2.31",
+  "yt-dlp>=2024.12.13",
+  "imageio-ffmpeg>=0.5",
+  "opencc-python-reimplemented>=0.1.7"
+]
+
+[project.optional-dependencies]
+asr = [
+  "mlx-whisper>=0.4"
+]
+dev = [
+  "pytest>=8",
+  "ruff>=0.8"
+]
+
+[project.urls]
+Homepage = "https://github.com/threerocks/video-subtitle-parser"
+Issues = "https://github.com/threerocks/video-subtitle-parser/issues"
+
+[project.scripts]
+video-subtitle-parser = "video_subtitle_parser.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
