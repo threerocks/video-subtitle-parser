@@ -20,9 +20,7 @@ The Bilibili path also uses `yt-dlp`. Some videos have no subtitles, empty subti
 
 For frame extraction, check for embedded subtitles, creator marks, and platform UI before publication.
 
-## Planned Platforms
+## Planned Features
 
-TikTok and Kuaishou/Kwai are planned but not enabled as stable platforms in the first release.
-
-- TikTok should be validated with metadata, subtitle, audio, and video samples across regions before it is exposed in `--platform`.
-- Kuaishou/Kwai should be validated separately because URL shapes, login state, and extractor stability may differ between domestic and international surfaces.
+- TikTok support: validate metadata, subtitle, audio, and video samples across regions before exposing it in `--platform`.
+- Kuaishou/Kwai support: validate URL shapes, login state, extractor stability, and domestic/international surface differences before exposing it in `--platform`.

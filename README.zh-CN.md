@@ -14,7 +14,29 @@
 | YouTube | `yt-dlp` 获取人工/自动字幕 | 字幕失败、为空或限流后本地 ASR | `--download-video` 下载 MP4 |
 | Bilibili | `yt-dlp` 获取字幕 | 字幕不可用、为空或登录限制后本地 ASR | `--download-video` 下载 MP4 |
 
-TikTok 和快手/Kwai 已列入即将支持，但不会作为第一版稳定平台暴露。
+## 功能特性
+
+稳定功能：
+
+- 自动识别抖音、YouTube、B 站链接。
+- 优先使用人工/官方字幕。
+- 在 ASR 前复用自动字幕。
+- 使用 `mlx-whisper` 做本地 ASR 兜底。
+- 生成清理稿、时间轴分段和 metadata。
+- 可选下载 MP4，服务后续截帧。
+- 通过 `--term-file` 做项目术语清洗。
+- 通过 `--initial-prompt` 给 ASR 传入领域词汇。
+- 通过同一套 CLI 契约接入 Codex、OpenClaw、Hermes、Claude Code、Cursor、Windsurf、Aider、Roo Code、Cline。
+
+计划功能：
+
+- TikTok 支持。
+- 快手/Kwai 支持。
+- cookie / 浏览器会话交接。
+- Chrome 远程调试集成。
+- 批量队列模式。
+- faster-whisper、whisper.cpp 等更多 ASR 后端。
+- JSONL 分段导出。
 
 ## 安装
 
@@ -211,8 +233,6 @@ video-subtitle-parser "$URL" --force --term-file terms.txt --out-dir materials/v
 ## 路线图
 
 - 支持 faster-whisper / whisper.cpp 等 ASR 后端
-- TikTok 支持，完成样本验证后开放
-- 快手/Kwai 支持，完成 extractor 和登录态验证后开放
 - 批量队列模式
 - 更多字幕格式
 - 可选 JSONL 分段导出

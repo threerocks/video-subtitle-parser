@@ -21,7 +21,29 @@ It is a CLI first. Codex, OpenClaw, Hermes, Claude Code, Cursor, Windsurf, Aider
 | YouTube | manual/auto subtitles through `yt-dlp` | local ASR when captions fail or rate-limit | MP4 with `--download-video` |
 | Bilibili | subtitles through `yt-dlp` | local ASR when subtitles are unavailable or gated | MP4 with `--download-video` |
 
-TikTok and Kuaishou/Kwai are planned next-platform candidates, but they are not exposed as stable platforms in the first open-source release.
+## Features
+
+Stable:
+
+- Auto-detect Douyin, YouTube, and Bilibili URLs.
+- Prefer manual/official subtitles when available.
+- Reuse auto subtitles before falling back to ASR.
+- Run local ASR fallback with `mlx-whisper`.
+- Write cleaned transcript, timestamped segments, and metadata artifacts.
+- Optionally download MP4 files for frame extraction.
+- Apply project-specific term cleanup through `--term-file`.
+- Pass domain vocabulary to ASR through `--initial-prompt`.
+- Integrate with Codex, OpenClaw, Hermes, Claude Code, Cursor, Windsurf, Aider, Roo Code, and Cline through the same CLI contract.
+
+Planned:
+
+- TikTok support.
+- Kuaishou/Kwai support.
+- Cookie/browser-session handoff.
+- Chrome remote debugging integration.
+- Batch queue mode.
+- Additional ASR backends such as faster-whisper and whisper.cpp.
+- JSONL segment export.
 
 ## Installation
 
@@ -208,8 +230,6 @@ This tool does not use Chrome remote debugging, browser cookies, logged-in Chrom
 ## Roadmap
 
 - ASR backend interface for faster-whisper and whisper.cpp
-- TikTok support after sample-based validation
-- Kuaishou/Kwai support after extractor and login-flow validation
 - batch queue mode
 - richer subtitle format support
 - optional JSONL segment export
